@@ -1,0 +1,54 @@
+.montessori-main { background: radial-gradient(ellipse at 95% 0%, #f6efea66, transparent 25%), #fdfcf9; }
+.montessori-page { width: min(1200px, calc(100% - 64px)); margin: 0 auto; padding: 32px 0 56px; }
+.montessori-page .back-link { margin-bottom: 24px; }
+.montessori-heading { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0 24px; margin-bottom: 28px; }
+.montessori-heading h1 { font-size: clamp(2.25rem, 4.4vw, 3.5rem); color: #173d3b; margin-bottom: 18px; }
+.montessori-heading::after { content: ""; display: block; grid-column: 1 / -1; width: 56px; height: 3px; border-radius: 2px; background: #8da184; }
+.montessori-page .montessori-values { font-family: var(--serif); font-size: .9375rem; font-style: italic; text-align: center; padding: 12px 20px; margin-bottom: 18px; background: #f5eee7; border-radius: 50%; }
+.montessori-page .montessori-motto { color: #516a4e; font-family: var(--serif); font-style: italic; margin-top: 18px; }
+.montessori-page h2 { font: 500 clamp(1.5rem, 2.6vw, 1.875rem)/1.25 var(--serif); color: #173d3b; margin: 0 0 18px; }
+.montessori-page h3 { font-family: var(--serif); font-weight: 500; }
+.montessori-page p { color: #4d636c; font-size: 1rem; line-height: 1.65; margin: 0 0 12px; }
+.montessori-page p:last-child { margin-bottom: 0; }
+.montessori-section { margin-top: 36px; }
+.montessori-principles { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+.sage { --montessori-tint: #edf2eb; --montessori-accent: #83997c; }
+.rose { --montessori-tint: #faf0ee; --montessori-accent: #ce9789; }
+.blue { --montessori-tint: #edf4f8; --montessori-accent: #719aaf; }
+.sand { --montessori-tint: #faf2e7; --montessori-accent: #cba275; }
+.montessori-icon { display: grid; place-items: center; flex: 0 0 48px; width: 48px; height: 48px; border-radius: 50%; background: var(--montessori-accent, #83997c); color: white; }
+.montessori-icon svg { width: 30px; height: 30px; }
+.montessori-principle { min-width: 0; background: var(--montessori-tint); border-radius: 14px; padding: 20px; }
+.montessori-principle header, .montessori-action header, .montessori-reflection header { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; }
+.montessori-principle header { min-height: 52px; }
+.montessori-principle h3 { font-size: 1.125rem; line-height: 1.3; margin: 0; }
+.montessori-principle p { font-size: .9375rem; line-height: 1.6; }
+.montessori-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
+.montessori-action { min-width: 0; display: flex; flex-direction: column; padding: 20px; border: 1px solid #e7ece7; border-radius: 16px; background: #ffffffd9; box-shadow: 0 6px 18px #1b342705; }
+.montessori-action h3 { font-size: 1.5rem; line-height: 1.25; margin: 0; }
+.montessori-action > p { font-size: .9375rem; margin-bottom: 22px; }
+.montessori-gallery { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px 12px; margin-top: auto; }
+.montessori-example { min-width: 0; margin: 0; }
+.montessori-thumbnail { position: relative; display: block; overflow: hidden; border-radius: 7px; background: #f0e5d4; }
+/* Display the original supplied image as a reusable sprite; its pixels remain unchanged. */
+.montessori-thumbnail img { position: absolute; max-width: none; height: auto; }
+.montessori-example figcaption { text-align: center; font-size: .8125rem; line-height: 1.35; margin-top: 8px; overflow-wrap: anywhere; }
+.montessori-reflection { background: var(--montessori-tint); padding: 26px; margin-top: 28px; border-radius: 16px; }
+.montessori-reflection h2 { margin-bottom: 0; }
+.montessori-reflection p { font-size: .9375rem; }
+@media (max-width: 1050px) {
+  .montessori-principles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .montessori-principle header { min-height: 0; }
+  .montessori-actions { grid-template-columns: 1fr; }
+  .montessori-gallery { gap: 20px 16px; }
+}
+@media (max-width: 600px) {
+  .montessori-heading { grid-template-columns: 1fr; }
+  .montessori-page .montessori-values { justify-self: start; text-align: left; padding: 0; background: none; }
+  .montessori-page { width: calc(100% - 32px); padding-top: 24px; padding-bottom: 40px; }
+  .montessori-principles { grid-template-columns: 1fr; }
+  .montessori-section { margin-top: 28px; }
+  .montessori-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 12px; }
+  .montessori-action, .montessori-principle, .montessori-reflection { padding: 18px; }
+  .montessori-action h3 { font-size: 1.375rem; }
+}
