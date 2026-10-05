@@ -1,0 +1,52 @@
+.qualifications-main {
+  background: radial-gradient(ellipse at 3% 0%, #e9ede466, transparent 35%), radial-gradient(ellipse at 97% 8%, #f2e5de66, transparent 32%), #fdfbf7;
+}
+.qualifications-page { width: min(1320px, calc(100% - 64px)); margin: 0 auto; padding: 40px 0 56px; }
+.qualifications-heading { margin-bottom: 32px; text-align: center; }
+.qualifications-heading h1 { color: #233d34; font-size: clamp(2.5rem, 4.5vw, 3.5rem); margin-bottom: 20px; }
+.qualifications-heading::after { content: ""; display: block; width: 56px; height: 3px; margin: 0 auto; background: #9aa88c; border-radius: 3px; }
+.qualifications-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: stretch; }
+.qualification-panel { --panel-tint: #eef1e9; --panel-border: #d6ded0; --icon-color: #73876a; display: flex; flex-direction: column; min-width: 0; padding: 8px; background: var(--panel-tint); border: 1px solid var(--panel-border); border-radius: 20px; box-shadow: 0 8px 24px #26382e06; }
+.registration-panel { --panel-tint: #f8efea; --panel-border: #eed8ca; --icon-color: #b88a7a; }
+.certification-panel { --panel-tint: #edf3f6; --panel-border: #d7e5eb; --icon-color: #7597a5; }
+.qualification-panel-heading { display: flex; align-items: center; gap: 16px; min-height: 120px; padding: 14px 12px 20px; }
+.qualification-icon { display: grid; place-items: center; flex: 0 0 68px; width: 68px; height: 68px; color: white; background: var(--icon-color); border-radius: 50%; box-shadow: inset 0 0 0 1px #ffffff35; }
+.qualification-icon svg { width: 40px; height: 40px; }
+.qualification-panel-heading h2 { font-family: var(--serif); font-size: clamp(1.2rem, 1.7vw, 1.5rem); font-weight: 500; line-height: 1.25; margin: 0; text-wrap: balance; }
+.academic-panel .qualification-panel-heading h2 { color: #294437; }
+.qualification-panel-body { flex: 1; padding: 0 20px; background: #ffffffd9; border-radius: 14px; }
+.qualification-item { padding: 22px 0; }
+.qualification-item + .qualification-item { border-top: 1px solid var(--line); }
+.qualification-item h3 { font-size: 1.0625rem; line-height: 1.4; margin: 0 0 8px; font-weight: 600; overflow-wrap: anywhere; }
+.qualification-item p { font-size: .9375rem; line-height: 1.6; color: #4c626a; margin: 0; }
+.qualification-meta span[aria-hidden] { margin: 0 3px; }
+.qualification-year { white-space: nowrap; }
+.qualification-item .qualification-description { margin-top: 14px; }
+.qualification-item .qualification-status { display: inline-block; max-width: 100%; padding: 4px 10px; margin-top: 12px; border-radius: 6px; font-size: .8125rem; font-weight: 500; line-height: 1.5; }
+.qualification-item .status-current { background: #edf3e9; color: #405a39; }
+.qualification-item .status-pending { background: #fbf0dd; color: #795923; }
+.qualification-item .status-completed { background: #eaf1f5; color: #3e606f; }
+@media (min-width: 1001px) and (max-width: 1150px) {
+  .qualification-panel-heading { gap: 12px; padding-left: 8px; padding-right: 8px; }
+  .qualification-icon { flex-basis: 54px; width: 54px; height: 54px; }
+  .qualification-icon svg { width: 34px; height: 34px; }
+  .qualification-panel-body { padding-left: 16px; padding-right: 16px; }
+}
+@media (max-width: 1000px) {
+  .qualifications-page { width: min(680px, calc(100% - 48px)); }
+  .qualifications-grid { grid-template-columns: 1fr; }
+  .qualification-panel-heading { min-height: 0; padding: 16px; }
+  .qualification-panel-heading h2 { font-size: 1.5rem; }
+  .qualification-panel-body { padding: 0 24px; }
+}
+@media (max-width: 480px) {
+  .qualifications-page { width: calc(100% - 32px); padding-top: 32px; padding-bottom: 40px; }
+  .qualifications-heading { margin-bottom: 24px; }
+  .qualification-panel { border-radius: 16px; padding: 6px; }
+  .qualification-panel-heading { padding: 14px 10px 18px; gap: 12px; }
+  .qualification-panel-heading h2 { font-size: 1.25rem; }
+  .qualification-icon { flex-basis: 54px; width: 54px; height: 54px; }
+  .qualification-icon svg { width: 34px; height: 34px; }
+  .qualification-panel-body { padding: 0 18px; border-radius: 12px; }
+  .qualification-item { padding: 20px 0; }
+}
